@@ -3,3 +3,5 @@ steps:
   args: ['build', '-t', 'gcr.io/onyx-glider-337908/testing', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/onyx-glider-337908/testing']
+- name: 'auto pull'
+  args: ['pull', 'gcr.io/onyx-glider-337908/testing:latest']
